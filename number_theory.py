@@ -149,4 +149,3 @@ def Legendre_symbol(a, p):
     if divides(p, a):
         return 0
     return 1 if is_quadratic_residue(a, p) else -1
-
