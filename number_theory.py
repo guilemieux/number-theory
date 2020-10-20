@@ -89,7 +89,7 @@ def is_prime(n):
     return _miller_rabin(n)
 
 def generate_large_prime(keysize=1024):
-    # Return a random prime number of keysize bits in size.
+    """Return a random prime number of keysize bits in size."""
     while True:
         num = random.randrange(2**(keysize-1), 2**(keysize))
         if is_prime(num):
@@ -137,7 +137,7 @@ def primitive_roots(n):
 
 # Quadratic residues
 def Q(n):
-    """Retunrns the quadratic residues modulo n"""
+    """Returns the quadratic residues modulo n"""
     return {pow(a, 2, n) for a in U(n)}
 
 def is_quadratic_residue(a, n):
