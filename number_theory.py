@@ -2,6 +2,7 @@ import random
 from functools import reduce
 from fractions import Fraction
 
+
 # Divisibility
 def divides(a, b):
     """Returns True if a divides b (i.e. a | b)"""
@@ -113,6 +114,7 @@ def phi(n):
         product *= 1 - Fraction(1, p)
     return int(n * product)
 
+
 # Group of Units
 def Z_mod_(n):
     return {a for a in range(n)}
@@ -131,6 +133,7 @@ def is_primitive_root(a, n):
 
 def primitive_roots(n):
     return {a for a in U(n) if is_primitive_root(a, n)}
+
 
 # Quadratic residues
 def Q(n):
